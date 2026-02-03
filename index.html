@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design system - Government of Alberta</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/ico" href="https://design.alberta.ca/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://design.alberta.ca/favicon-192.png">
+
+    <!-- Ionicons for GOA components -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"></script>
+
+    <!-- GOA Web Components CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@abgov/web-components@1.34.0/index.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="alberta-design-system.css">
+
+    <!-- GOA Web Components -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@abgov/web-components@1.34.0/index.js"></script>
+  </head>
+
+  <body>
+    <div id="root">
+      <div class="app">
+        <!-- Main Layout -->
+        <goa-one-column-layout>
+          <!-- Header Section -->
+          <section class="header" slot="header">
+            <!-- Microsite Header -->
+            <goa-microsite-header
+              type="live"
+              feedbackurl="https://forms.microsoft.com/r/8Zp7zSJS6W"
+              maxcontentwidth="1440px">
+              <div slot="version">
+                <div class="version-language-switcher">
+                  <!-- Framework Switcher -->
+                  <goa-popover padded="false">
+                    <div slot="target">
+                      <div class="menu-link">
+                        <span class="version-language-switcher__heading">React</span>
+                        <goa-icon type="chevron-down" size="small"></goa-icon>
+                      </div>
+                    </div>
+                    <a href="#angular" class="version-language-switcher__menu">Angular</a>
+                    <a href="#react" class="version-language-switcher__menu version-language-switcher__menu--current">React</a>
+                  </goa-popover>
+
+                  <!-- Version Switcher -->
+                  <goa-popover padded="false">
+                    <div slot="target">
+                      <div class="menu-link">
+                        <span class="version-language-switcher__heading">v6.0.0+</span>
+                        <goa-icon type="chevron-down" size="small"></goa-icon>
+                      </div>
+                    </div>
+                    <a href="#v6" class="version-language-switcher__menu version-language-switcher__menu--current">v6.0.0+</a>
+                    <a href="#v5" class="version-language-switcher__menu">v5.4.1</a>
+                  </goa-popover>
+
+                  <!-- Help Icon -->
+                  <goa-icon-button icon="help-circle" size="small" title="Version and framework info">
+                    <goa-tooltip>Version and framework info</goa-tooltip>
+                  </goa-icon-button>
+                </div>
+              </div>
+            </goa-microsite-header>
+
+            <!-- App Header -->
+            <goa-app-header
+              heading="Design system"
+              url="/"
+              fullmenubreakpoint="996"
+              maxcontentwidth="1440px">
+              <!-- Logo Slot -->
+              <a slot="logo" href="/">
+                <img src="alberta.svg" alt="Alberta" height="44" />
+              </a>
+
+              <!-- Navigation Menu -->
+              <goa-app-header-menu slot="menu">
+                <a href="/get-started">Get started</a>
+                <a href="/foundations">Foundations</a>
+                <a href="/components">Components</a>
+                <a href="/examples">Examples</a>
+                <a href="/design-tokens">Design tokens</a>
+                <a href="/support">Support</a>
+              </goa-app-header-menu>
+            </goa-app-header>
+
+            <!-- Notification Banner -->
+            <goa-notification type="information" maxcontentwidth="1440px">
+              <div>
+                <strong>New version available:</strong> We've released version 6.0 of the design system with improved accessibility and new components.
+                <a href="/get-started/developers/update">Learn more about updating</a>
+              </div>
+            </goa-notification>
+          </section>
+
+          <!-- Main Content Area -->
+          <div class="content">
+            <!-- Side Navigation -->
+            <aside class="side-menu">
+              <goa-side-menu>
+                <!-- Designers Section -->
+                <goa-side-menu-group heading="Designers">
+                  <a href="/designers/overview">Overview</a>
+                  <a href="/designers/resources">Resources</a>
+                  <a href="/designers/contribute">Contribute</a>
+                </goa-side-menu-group>
+
+                <!-- Developers Section -->
+                <goa-side-menu-group heading="Developers" open="true">
+                  <a href="/get-started/developers/setup">Setup</a>
+                  <a href="/get-started/developers/update" class="current">Update</a>
+                  <a href="/get-started/developers/styling">Styling</a>
+                  <a href="/get-started/developers/testing">Testing</a>
+                </goa-side-menu-group>
+
+                <!-- Support Section -->
+                <goa-side-menu-group heading="Support">
+                  <a href="/support/faq">FAQ</a>
+                  <a href="/support/contact">Contact</a>
+                  <a href="/support/contribute">Contribute</a>
+                </goa-side-menu-group>
+              </goa-side-menu>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="main">
+              <!-- Page Title -->
+              <goa-text size="heading-xl" mt="none" mb="m">
+                <h1>Update to the latest version</h1>
+              </goa-text>
+
+              <!-- Introduction -->
+              <goa-text size="body-l" mt="none" mb="xl">
+                Keep your application up to date with the latest features, improvements, and bug fixes by updating to the newest version of the design system.
+              </goa-text>
+
+              <!-- Important Callout -->
+              <goa-callout type="important" size="medium" mt="none" mb="xl">
+                <goa-text size="heading-s" mt="none" mb="s">
+                  <strong>Breaking changes in v6.0</strong>
+                </goa-text>
+                <goa-text size="body-m" mt="none" mb="m">
+                  This major version includes breaking changes. Please review the migration guide carefully before upgrading.
+                </goa-text>
+                <a href="/get-started/developers/migration">View migration guide</a>
+              </goa-callout>
+
+              <!-- Section: Major differences -->
+              <goa-text size="heading-m" mt="l" mb="m">
+                <h2>Major differences between current and new version</h2>
+              </goa-text>
+
+              <goa-text size="body-m" mt="none" mb="m">
+                Version 6.0 introduces several significant improvements and changes:
+              </goa-text>
+
+              <goa-container mt="m" mb="l">
+                <ul class="goa-unordered-list">
+                  <li><strong>Enhanced accessibility:</strong> All components now meet WCAG 2.1 Level AA standards</li>
+                  <li><strong>Improved performance:</strong> Reduced bundle size by 30% through optimized component code</li>
+                  <li><strong>New design tokens:</strong> Updated color palette and spacing system for better consistency</li>
+                  <li><strong>Modernized components:</strong> Refreshed visual design aligned with current web standards</li>
+                  <li><strong>Better TypeScript support:</strong> Full type definitions for all components and props</li>
+                </ul>
+              </goa-container>
+
+              <!-- Section: Update process -->
+              <goa-text size="heading-m" mt="l" mb="m">
+                <h2>Update process</h2>
+              </goa-text>
+
+              <goa-text size="body-m" mt="none" mb="m">
+                Follow these steps to update your application:
+              </goa-text>
+
+              <!-- Step 1 -->
+              <goa-container mt="m" mb="m">
+                <goa-text size="heading-s" mt="none" mb="s">
+                  <h3>1. Update package dependencies</h3>
+                </goa-text>
+                <goa-text size="body-m" mt="none" mb="s">
+                  Update the design system package to the latest version:
+                </goa-text>
+                <div class="box-container">
+                  <code>npm install @abgov/web-components@latest</code>
+                </div>
+              </goa-container>
+
+              <!-- Step 2 -->
+              <goa-container mt="m" mb="m">
+                <goa-text size="heading-s" mt="none" mb="s">
+                  <h3>2. Review breaking changes</h3>
+                </goa-text>
+                <goa-text size="body-m" mt="none" mb="m">
+                  Check the <a href="/get-started/developers/migration">migration guide</a> for a complete list of breaking changes and how to address them in your code.
+                </goa-text>
+              </goa-container>
+
+              <!-- Step 3 -->
+              <goa-container mt="m" mb="m">
+                <goa-text size="heading-s" mt="none" mb="s">
+                  <h3>3. Update component usage</h3>
+                </goa-text>
+                <goa-text size="body-m" mt="none" mb="m">
+                  Update your components to use the new API. Some component props have been renamed or removed.
+                </goa-text>
+              </goa-container>
+
+              <!-- Step 4 -->
+              <goa-container mt="m" mb="m">
+                <goa-text size="heading-s" mt="none" mb="s">
+                  <h3>4. Test your application</h3>
+                </goa-text>
+                <goa-text size="body-m" mt="none" mb="m">
+                  Thoroughly test your application to ensure all components work as expected with the new version.
+                </goa-text>
+              </goa-container>
+
+              <!-- Section: Need help? -->
+              <goa-divider mt="2xl" mb="2xl"></goa-divider>
+
+              <goa-text size="heading-m" mt="none" mb="m">
+                <h2>Need help?</h2>
+              </goa-text>
+
+              <div class="support-info">
+                <goa-text size="body-m" mt="none" mb="m">
+                  If you encounter any issues during the update process, our team is here to help.
+                </goa-text>
+
+                <goa-container mt="m" mb="m">
+                  <ul class="goa-unordered-list">
+                    <li><a href="https://github.com/GovAlta/ui-components/issues">Submit an issue on GitHub</a></li>
+                    <li>Join us on Slack: <code>#design-system-support</code></li>
+                    <li><a href="/support/contact">Contact the design system team</a></li>
+                  </ul>
+                </goa-container>
+              </div>
+
+              <!-- Back Link -->
+              <a href="/get-started/developers" class="back">Back to Developers</a>
+            </main>
+          </div>
+
+          <!-- Footer Section -->
+          <section class="footer" slot="footer">
+            <goa-app-footer maxcontentwidth="1440px">
+              <!-- Navigation Sections -->
+              <goa-app-footer-nav-section maxcolumncount="2" heading="Resources">
+                <a href="/get-started">Get started</a>
+                <a href="/foundations">Foundations</a>
+                <a href="/examples">Examples</a>
+                <a href="/components">Components</a>
+                <a href="/design-tokens">Design tokens</a>
+              </goa-app-footer-nav-section>
+
+              <goa-app-footer-nav-section maxcolumncount="1" heading="Get support">
+                <a href="https://github.com/GovAlta/ui-components/issues" target="_blank">Submit an issue</a>
+                <a href="#">#design-system-support</a>
+              </goa-app-footer-nav-section>
+
+              <!-- Divider -->
+              <goa-divider></goa-divider>
+
+              <!-- Meta Section -->
+              <goa-app-footer-meta-section>
+                <a href="/support/contribute">Contribute to the design system</a>
+                <a href="/roadmap">Roadmap</a>
+                <a href="/release-notes">Release notes</a>
+              </goa-app-footer-meta-section>
+            </goa-app-footer>
+          </section>
+        </goa-one-column-layout>
+      </div>
+    </div>
+  </body>
+</html>
